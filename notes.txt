@@ -1,0 +1,12 @@
+Flujo con Usuario/Contraseña:
+
+- El usuario se autentica con su email y contraseña.
+- Se genera un JWT y se devuelve al cliente.
+
+Flujo con Google (OAuth2):
+
+- El usuario se autentica con Google.
+- Se recibe un Access Token de Google.
+- Verifica si el usuario ya existe en la base de datos:
+	- Si existe: Genera un JWT y lo devuelve.
+	- Si no existe: Lo guarda en la base de datos y luego genera el JWT.
