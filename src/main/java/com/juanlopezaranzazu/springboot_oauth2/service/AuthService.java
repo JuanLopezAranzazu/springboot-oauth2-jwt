@@ -73,8 +73,6 @@ public class AuthService {
         // guardar usuario
         userRepository.save(newUser);
 
-        // generar token
-        String token = jwtService.generateToken(userRequest.getUsername());;
         return UserResponse.fromEntity(newUser);
     }
 }
